@@ -1,0 +1,170 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e9e6;
+  box-shadow: 0 0.25rem 1rem rgb(24 54 39 / 5%);
+}
+
+.navbar-brand {
+  color: #193d2b;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+}
+
+.brand-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+}
+
+.navbar-nav .nav-link {
+  border-radius: 999px;
+  color: #53665a;
+  font-size: 0.95rem;
+  padding-inline: 0.85rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: #eaf4ed;
+  color: #17653d;
+}
+
+.app-main {
+  flex: 1;
+  padding-block: clamp(2rem, 6vw, 5rem);
+}
+
+.dashboard,
+.collection-page {
+  max-width: 64rem;
+  margin-inline: auto;
+}
+
+.dashboard {
+  padding-block: clamp(0.5rem, 3vw, 2rem);
+}
+
+.eyebrow {
+  color: #26754b;
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.65rem;
+  text-transform: uppercase;
+}
+
+.dashboard h1,
+.page-title {
+  color: #193d2b;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 750;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+  margin: 0;
+}
+
+.dashboard .lead {
+  color: #617168;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  max-width: 42rem;
+  margin-top: 1rem;
+}
+
+.dashboard-card {
+  border: 1px solid #e3ebe5;
+  border-radius: 1rem;
+  color: inherit;
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.dashboard-card:hover {
+  border-color: #9bc9a9;
+  box-shadow: 0 0.75rem 2rem rgb(24 54 39 / 9%);
+  transform: translateY(-2px);
+}
+
+.card-kicker {
+  color: #64806d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dashboard-card .card-title {
+  color: #193d2b;
+  font-weight: 700;
+}
+
+.card-link {
+  color: #26754b;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.collection-page .page-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.collection-table-wrap,
+.empty-state {
+  background: #ffffff;
+  border: 1px solid #e3ebe5;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgb(24 54 39 / 4%);
+  overflow: hidden;
+}
+
+.collection-table-wrap .table {
+  min-width: 38rem;
+}
+
+.collection-table-wrap thead th {
+  background: #f2f7f3;
+  border-bottom-color: #e3ebe5;
+  color: #42614c;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.collection-table-wrap td {
+  color: #3f5146;
+  max-width: 24rem;
+  overflow-wrap: anywhere;
+}
+
+.empty-state {
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.empty-state h2 {
+  color: #193d2b;
+}
+
+.app-footer {
+  border-top: 1px solid #e5e9e6;
+  color: #718077;
+  font-size: 0.875rem;
+  padding-block: 1.25rem;
+}
+
+@media (max-width: 991.98px) {
+  .app-navbar .container {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-block: 0.75rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.875rem;
+    padding-inline: 0.65rem;
+  }
+}
