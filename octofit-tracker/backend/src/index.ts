@@ -1,15 +1,21 @@
 import express from 'express';
-import './config/database';
+import type { ErrorRequestHandler } from 'express';
+import apiRouter from './routes/api';
 
 const app = express();
-const port = Number(process.env.PORT) || 8000;
 
 app.use(express.json());
+app.use(apiRouter);
 
 app.get('/api/health', (_request, response) => {
   response.json({ status: 'ok' });
 });
 
-app.listen(port, '0.0.0.0', () => {
-  console.log(`OctoFit API listening on port ${port}`);
-});
+const errorHandler: ErrorRequestHandler = (error, _request, response, _next) => {
+  console.error('API request failed:', error);
+  response.status(500).json({ error: 'Internal server error' });
+};
+
+app.use(errorHandler);
+
+export default app;
